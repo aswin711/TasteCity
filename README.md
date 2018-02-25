@@ -20,6 +20,7 @@ This repository contains the source code for the application
 ![2.png](https://github.com/aswin711/TasteCity/blob/master/screenshots/2.png)
 ![3.png](https://github.com/aswin711/TasteCity/blob/master/screenshots/3.png)
 ![4.png](https://github.com/aswin711/TasteCity/blob/master/screenshots/4.png)
+![5.png](https://github.com/aswin711/TasteCity/blob/master/screenshots/5.png)
 
 
 
