@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/FormStyle"
+       >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Delivery"
+            android:id="@+id/shipping_delivery"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view1"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="First Name"
+            android:id="@+id/shipping_first_name" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view2"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Last Name"
+            android:id="@+id/shipping_last_name"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view3"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Email"
+            android:id="@+id/shipping_email"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view4"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Phone Number"
+            android:id="@+id/shipping_phone_number"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view5"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="City"
+            android:id="@+id/shipping_city"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view6"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Zipcode"
+            android:id="@+id/shipping_zipcode"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view7"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Address Line1"
+            android:id="@+id/shipping_address_line1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view8"
+            style="@style/DividerStyle"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:hint="Address Line2"
+            android:id="@+id/shipping_address_line2"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view9"
+            style="@style/DividerStyle"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:text="Proceed to Payment"
+            android:id="@+id/shipping_proceed"
+            style="@style/FormButton"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

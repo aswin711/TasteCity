@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/first_name_txt"
+            android:layout_marginTop="10dp"
+            android:text="First Name"
+            android:textSize="16sp"
+            android:textColor="@color/item_name"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="John Doe"
+            android:textColor="@color/item_ingredients"
+            android:textSize="16sp"
+            fontPath="@string/roboto_light"
+            android:layout_alignParentRight="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="@color/item_name"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_name_txt"
+            android:layout_marginTop="10dp"
+            android:text="Last Name"
+            android:textSize="16sp"
+            android:textColor="@color/item_name"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_name"
+            android:layout_marginTop="5dp"
+            android:text="Sipris"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:textColor="@color/item_ingredients"
+            fontPath="@string/roboto_light"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="@color/item_name"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textColor="@color/item_name"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/email"
+            fontPath="@string/roboto_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="johndoe@xyz.com"
+            android:textColor="@color/item_ingredients"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/item_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_text"
+            android:layout_marginTop="10dp"
+            android:text="Phone"
+            android:textSize="16sp"
+            android:textColor="@color/item_name"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone"
+            android:layout_marginTop="5dp"
+            android:text="+123456789"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:textColor="@color/item_ingredients"
+            fontPath="@string/roboto_light"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="@color/item_name"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

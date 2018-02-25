@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#fff"
+>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate Corrosant"
+            android:id="@+id/menu_popup_heading"
+            android:layout_marginLeft="15dp"
+            android:textSize="@dimen/_16"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/item_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="$ 50"
+            android:transitionName="menu_rate"
+            android:id="@+id/menu_popup_price"
+            android:layout_marginTop="18dp"
+            android:textSize="@dimen/_18"
+            android:textColor="@color/price"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14"
+            android:textColor="@color/item_ingredients"
+            android:transitionName="menu_description"
+            android:id="@+id/menu_popup_description"
+            android:text="@string/menu_decription"
+            android:layout_below="@+id/menu_popup_heading"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@id/menu_popup_price"
+            fontPath="@string/roboto_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/menu_popup_description"
+            android:id="@+id/menu_popup_size"
+            android:layout_marginTop="16dp"
+            android:text="Size"
+            android:textColor="@color/item_name"
+            android:textSize="@dimen/_16"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_popup_size"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/menu_popup_size_recyclerview">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_popup_size_recyclerview"
+            android:text="Addons"
+            android:id="@+id/menu_popup_addons"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="@dimen/_16"
+            android:textColor="@color/item_name"
+
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/menu_popup_addons_recyclerview"
+            android:layout_below="@+id/menu_popup_addons">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu_popup_addons_recyclerview"
+            android:text="Quantity"
+            android:id="@+id/menu_popup_quantity"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="@dimen/_16"
+            android:textColor="@color/item_name"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/menu_popup_quantity"
+            android:id="@+id/layout_quantity"
+            android:background="@drawable/menu_quantity_border">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/menu_popup_quantity_minus"
+                android:src="@drawable/minus_filled_80"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_popup_quantity_count"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="1"
+                android:textSize="22dp"
+                android:textColor="@color/item_name"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/menu_popup_quantity_plus"
+                android:src="@drawable/plus_filled_80"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu_popup_total"
+            android:layout_below="@+id/layout_quantity"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/item_name"
+            android:textSize="@dimen/_18"
+            android:text="Total"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_quantity"
+            android:id="@+id/menu_popup_total_count"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/item_name"
+            android:textSize="@dimen/_18"
+            android:text="$50"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Add to Cart"
+            android:layout_below="@+id/menu_popup_total"
+            android:id="@+id/menu_popup_addtocart"
+            style="@style/FormButton"
+            />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

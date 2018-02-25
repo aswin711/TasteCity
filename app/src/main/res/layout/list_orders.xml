@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_dispatch"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/list_icon"
+            android:id="@+id/restaurant_icon"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/restaurant_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="1dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malabar Plaza"
+                android:layout_alignParentTop="true"
+                android:id="@+id/rest_name"
+                android:textSize="16sp"
+                android:textColor="@color/item_name"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orders_order_id"
+                android:layout_centerVertical="true"
+                android:text="#SC123456"
+                android:textSize="14sp"
+                android:textColor="@color/item_ingredients"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/orders_dispatched_text"
+                android:text="Dispatched"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                fontPath="@string/roboto_medium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orders_dispatch_date"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="08-Jun-2016"
+                android:textSize="14sp"
+                android:textColor="@color/item_name" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/item_ingredients"
+
+        />
+</LinearLayout>

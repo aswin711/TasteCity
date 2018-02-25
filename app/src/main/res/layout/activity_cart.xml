@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/header"
+                android:elevation="5dp"
+                android:background="@color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_your_orders"
+                    android:text="Your Order"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="@dimen/_18"
+                    android:textColor="@color/item_name"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_edit_cart"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="Edit Order"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_recyclerview"
+                tools:listitem="@layout/list_cart_items"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/header">
+
+
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_add_more"
+                android:layout_below="@+id/cart_recyclerview"
+                android:text="Add More"
+                android:textSize="@dimen/_14"
+                android:visibility="invisible"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@+id/cart_add_more"
+                android:id="@+id/layout_cart_amount"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_sub_total"
+                    android:text="Sub Total"
+                    style="@style/CartSubTextAppearence"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_sub_total_text"
+                    android:layout_alignParentRight="true"
+                    android:text="$100"
+                    style="@style/CartSubTextAppearence"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_sub_total"
+                    android:id="@+id/cart_service_fee"
+                    android:text="Service Fee"
+                    style="@style/CartSubTextAppearence"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cart_sub_total_text"
+                    android:id="@+id/cart_service_fee_text"
+                    android:layout_alignParentRight="true"
+                    android:text="$50"
+                    android:textSize="@dimen/_16"
+                    style="@style/CartSubTextAppearence"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_service_fee"
+                    android:id="@+id/cart_delivery_fee"
+                    android:text="Delivery Fee"
+                    style="@style/CartSubTextAppearence"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_service_fee_text"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/cart_delivery_fee_text"
+                    android:text="$15"
+                    style="@style/CartSubTextAppearence"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0"
+                android:orientation="horizontal"
+                android:id="@+id/layout_couponcode"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/layout_cart_amount">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/cart_coupon_code"
+                    android:hint="Enter coupon code"
+                    fontPath="@string/roboto_light"
+                    android:textSize="@dimen/_16"
+                    android:textAlignment="center"
+                    android:textColorLink="@color/price"
+                    android:textColorHighlight="@color/item_ingredients"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/hint_color"
+                    android:textColorHint="@color/item_ingredients"
+                    android:background="@drawable/edittext_coupon_code_bg"
+                    android:elevation="1dp"
+                    android:layout_alignParentLeft="true"
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.4"
+                    android:id="@+id/cart_coupon_code_verify"
+                    android:layout_below="@id/layout_cart_amount"
+                    android:layout_toRightOf="@+id/cart_coupon_code"
+                    android:layout_marginRight="15dp"
+                    android:textSize="@dimen/_16"
+                    android:text="Apply"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@color/price"/>
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_total"
+                android:text="Total"
+                android:layout_below="@+id/layout_couponcode"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/_18"
+                android:textColor="@color/item_name"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_total_text"
+                android:text="$165"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/layout_couponcode"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:textSize="@dimen/_18"
+                android:textColor="@color/price"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_edit_ht"
+                android:id="@+id/cart_proceed"
+                style="@style/FormButton"
+                android:text="Proceed to Checkout"
+                android:layout_below="@+id/cart_total_text"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+
+
+

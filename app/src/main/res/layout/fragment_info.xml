@@ -1,0 +1,217 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tropchop.food.delivery.ui.single_restaurant.info.InfoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cusines">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cusine_name"
+                android:text="Cusine"
+                android:textSize="@dimen/title_size"
+                android:textColor="@color/item_name"/>
+            
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chip_view"
+                android:layoutDirection="ltr"
+                android:layout_below="@+id/cusine_name"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delivery_hours"
+            android:layout_below="@id/cusines"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delivery_hours_txt"
+                android:text="Delivery Hours"
+                android:textSize="@dimen/title_size"
+                android:textColor="@color/item_name"/>
+
+            <TableLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/opening_hours"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/delivery_hours_txt"
+                >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day1"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr1"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day2"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr2"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day3"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr3"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day4"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr4"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day5"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr5"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/day6"
+                        style="@style/TableCellStyleLeft"/>
+
+                    <TextView
+                        android:id="@+id/open_hr6"
+                        style="@style/TableCellStyleLRight"
+                        />
+                </TableRow>
+
+
+
+
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/delivery_hour_time_table"
+                android:layout_below="@+id/delivery_hours_txt"
+                android:textSize="@dimen/subtitle_size"
+                android:visibility="gone"
+                android:textColor="@color/item_ingredients"
+                android:layout_marginTop="10dp"
+                android:text="@string/time_table_txt"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delivery_locations"
+            android:layout_below="@+id/delivery_hours"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delivery_locations_txt"
+                android:text="Delivery Locations"
+                android:textSize="@dimen/title_size"
+                android:textColor="@color/item_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delivery_locations_addresss"
+                android:layout_below="@id/delivery_locations_txt"
+                android:layout_marginTop="10dp"
+                android:text="@string/sample_address"
+                android:textSize="@dimen/subtitle_size"
+                android:textColor="@color/item_ingredients"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/address"
+            android:layout_below="@+id/delivery_locations"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address_txt"
+                android:text="Address"
+                android:textSize="@dimen/title_size"
+                android:textColor="@color/item_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address_details"
+                android:text="@string/sample_addrs_details"
+                android:layout_below="@id/address_txt"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/subtitle_size"
+                android:textColor="@color/item_ingredients"/>
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/mapview"
+                android:layout_below="@id/address_details"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/sample_map_view"
+                android:scaleType="fitXY"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

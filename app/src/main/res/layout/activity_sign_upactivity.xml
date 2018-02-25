@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/banner_login"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sign_in_form">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:src="@drawable/foodday_multi__logo_512"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sign_in_form">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="First Name"
+                android:background="@android:color/transparent"
+                style="@style/LoginFormEdit" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/item_ingredients"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/last_name"
+                android:hint="Last Name"
+                android:background="@android:color/transparent"
+                style="@style/LoginFormEdit"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/item_ingredients"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/mobile"
+                android:hint="Mobile"
+                android:background="@android:color/transparent"
+                style="@style/LoginFormEdit"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/item_ingredients"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/email"
+                android:hint="Email"
+                android:background="@android:color/transparent"
+                style="@style/LoginFormEdit"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/item_ingredients"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/password"
+                android:hint="Password"
+                android:background="@android:color/transparent"
+                style="@style/LoginFormEdit"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:background="@color/item_ingredients"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/current_location"
+                android:layout_below="@+id/location_area"
+                android:layout_centerHorizontal="true">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agree"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agree_txt"
+                    android:layout_toRightOf="@id/agree"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/terms"
+                    android:textSize="12sp"
+                    android:textColor="@color/item_name"
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/search_restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"
+                android:imeActionId="3"
+                android:imeOptions="actionDone"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Already Registered? Login here"
+                android:id="@+id/login"
+                android:textSize="12sp"
+                android:textColor="@color/item_name"
+                fontPath="@string/roboto_regular"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

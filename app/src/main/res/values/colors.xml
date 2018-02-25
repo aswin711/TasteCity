@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b3181c</color>
+    <color name="colorPrimaryDark">#b3181c</color>
+    <color name="colorAccent">#b3181c</color>
+    <color name="item_name">#333333</color>
+    <color name="item_ingredients">#9a9a9a</color>
+    <color name="location_active">#e13334</color>
+    <color name="location_bg">#fafafa</color>
+    <color name="black_overlay">#7a000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_label">#7c7c7c</color>
+    <color name="fab_color">#fc3c82f2</color>
+    <color name="price">#0ca066</color>
+    <color name="cart_sub">#919191</color>
+    <color name="cart_list_item">#8c8c8c</color>
+    <color name="hint_color">#333333</color>
+    <color name="backgroundGrey">#d9d9d9</color>
+    <color name="textGrey">#919191</color>
+    <color name="black_effective">#2a2a2a</color>
+    <color name="orange">#ffa500</color>
+    <color name="green">#2ecc71</color>
+</resources>

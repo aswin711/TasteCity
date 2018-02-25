@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/thank_you_text"
+            android:text="THANK YOU"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/for_your_order_text"
+            android:text="FOR YOUR ORDER"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/thank_you_text"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/item_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thank_you_order_id"
+            android:text="Order number: #SC123456"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/for_your_order_text"
+            android:textSize="14dp"
+            android:textColor="@color/item_ingredients"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thank_you_image"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/thank_you"
+            android:layout_below="@+id/thank_you_order_id"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        android:text="Continue Shopping"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/continue_shopping"
+        android:textAllCaps="false"/>
+</RelativeLayout>

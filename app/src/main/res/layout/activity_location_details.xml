@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sign_in_form">
+
+        <ImageView
+            android:layout_width="210dp"
+            android:layout_height="65dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_image"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="2dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sign_in_form">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/location_island"
+                android:text="@string/island"
+                android:textSize="@dimen/_18"
+                android:textColorHint="@color/item_name"
+                android:textColor="@color/item_name"
+                android:padding="10dp"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:id="@+id/view0"
+                android:layout_below="@+id/location_island"
+                android:background="@color/item_ingredients"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:id="@+id/location_city"
+               android:layout_below="@id/view0"
+               android:text="@string/address_type"
+               android:textSize="@dimen/_18"
+               android:textColorHint="@color/item_name"
+               android:textColor="@color/item_name"
+               android:padding="10dp"
+               android:gravity="center_vertical"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:id="@+id/view1"
+                android:layout_below="@+id/location_city"
+                android:background="@color/item_ingredients"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/location_area"
+                android:layout_below="@+id/location_city"
+                android:text="@string/neighbourhood"
+                android:textSize="@dimen/_18"
+                android:textColorHint="@color/item_name"
+                android:textColor="@color/item_name"
+                android:padding="10dp"
+                android:gravity="center_vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:id="@+id/view2"
+                android:layout_below="@id/location_area"
+                android:background="@color/item_ingredients"/>
+
+
+            <Button
+                android:id="@+id/search_restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:imeActionId="3"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/_18"
+                android:text="@string/search_restaurants"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inner_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/review_name"
+            android:text="Chocolate Muffin"
+            android:textSize="@dimen/_16"
+            android:textColor="@color/item_name"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/review_description"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/review_name"
+            android:text="A rich chocolate muffin with creamy caramel center"
+            android:textSize="@dimen/_14"
+            android:textColor="@color/item_ingredients"
+            fontPath="@string/roboto_light"
+            />
+        <TextView
+            android:id="@+id/menu_view_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/review_description"
+            android:text="@string/dollar50"
+            android:textColor="@color/price"
+            android:textSize="@dimen/_16"
+            />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/inner_content"
+        android:background="@color/item_ingredients"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,206 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:scrollbars="none"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_confirmation_top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="25dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_confirmation_address"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirmation_shipping_to"
+                    android:text="Shipping to"
+                    style="@style/TitlePrimaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/confirmation_shipping_to_edit"
+                    android:text="Edit"
+                    android:visibility="gone"
+                    style="@style/SubTitlePrimaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/confirmation_shipping_to"
+                    android:id="@+id/confirmation_shipping_to_address"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/sample_addrs_details"
+                    style="@style/TitleSecondaryText"
+                    android:textColor="@color/item_ingredients"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_confirmation_order"
+                android:layout_below="@id/layout_confirmation_address"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirmation_order"
+                    android:text="Your Order"
+                    style="@style/TitlePrimaryText"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Edit"
+                    android:visibility="gone"
+                    android:id="@+id/layout_confirmation_order_edit"
+                    style="@style/SubTitlePrimaryText"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/confirmation_order"
+                    android:orientation="vertical"
+                    xmlns:tools="http://schemas.android.com/tools">
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirmation_order_recyclerview"
+                        android:layout_below="@+id/confirmation_order"
+                        android:layout_marginTop="15dp"
+                        tools:listitem="@layout/list_cart_items">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_confirmation_payment"
+                android:layout_below="@id/layout_confirmation_order"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/confirmation_payment"
+                    android:text="Payment Summary"
+                    style="@style/TitlePrimaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Edit"
+                    android:visibility="gone"
+                    android:id="@+id/confirmation_payment_edit"
+                    style="@style/SubTitlePrimaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmation_payment"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/confirmation_payment_sub_total_text"
+                    android:text="Sub Total"
+                    style="@style/TitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirmation_payment"
+                    android:text="$100"
+                    android:id="@+id/confirmation_payment_sub_total"
+                    android:layout_marginTop="20dp"
+                    style="@style/SubTitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmation_payment_sub_total"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/confirmation_payment_tax_text"
+                    android:text="Tax(2.5%)"
+                    style="@style/TitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirmation_payment_sub_total"
+                    android:text="$100"
+                    android:id="@+id/confirmation_payment_tax"
+                    android:layout_marginTop="10dp"
+                    style="@style/SubTitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmation_payment_tax"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/confirmation_payment_delivery_charge_text"
+                    android:text="Delivery Charge"
+                    style="@style/TitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirmation_payment_tax"
+                    android:text="$100"
+                    android:id="@+id/confirmation_payment_delivery_charge"
+                    android:layout_marginTop="10dp"
+                    style="@style/SubTitleSecondaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmation_payment_delivery_charge"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/confirmation_payment_order_total_text"
+                    android:text="Order Total"
+                    style="@style/TitlePrimaryText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/confirmation_payment_delivery_charge"
+                    android:text="$100"
+                    android:id="@+id/confirmation_payment_order_total"
+                    android:layout_marginTop="20dp"
+                    style="@style/SubTitlePrimaryText"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:id="@+id/confirmation_order_now"
+            android:layout_below="@id/layout_confirmation_top"
+            android:text="Order Now"
+            style="@style/FormButton"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

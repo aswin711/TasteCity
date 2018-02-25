@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2x"
+            android:textSize="@dimen/_14"
+            fontPath="@string/roboto_light"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/list_cart_count"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/list_cart_count"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/list_cart_name"
+            fontPath="@string/roboto_light"
+            android:layout_centerVertical="true"
+            android:text="Chicken Schezwan Momos"
+            android:textSize="@dimen/_14"
+            android:textColor="@color/cart_list_item"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/list_cart_price"
+            fontPath="@string/roboto_light"
+            android:layout_centerVertical="true"
+            android:text="$50"
+            android:textSize="@dimen/_14"
+            android:textColor="@color/colorPrimary"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/list_cart_count"
+            android:layout_marginTop="10dp"
+            android:background="@color/item_ingredients"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

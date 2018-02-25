@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_wrapper"
+            android:paddingTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:theme="@style/PaymentTopWrapperStyle"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/payment_promocode"
+                android:text="Have a Promocode?"
+                android:textColor="@color/item_name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Apply"
+                android:id="@+id/payment_apply"
+                android:textColor="@color/colorPrimary"
+                fontPath="@string/roboto_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:id="@+id/view2"
+                android:background="@color/backgroundGrey"
+                android:layout_below="@+id/payment_apply"
+                android:layout_marginTop="25dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_pay_via_cash"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/payment_pay_via_cash"
+                    android:layout_centerVertical="true"
+                    android:buttonTint="@color/colorPrimary"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/payment_pay_via_cash"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/payment_pay_via_cash_text"
+                    android:text="Pay via Cash"
+                    android:textColor="@color/item_name"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cash"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/payment_pay_via_cash"
+                    android:background="@color/backgroundGrey"
+                    android:layout_marginTop="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_pay_via_card"
+                android:layout_below="@+id/layout_pay_via_cash"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/payment_pay_via_card"
+                    android:layout_centerVertical="true"
+                    android:buttonTint="@color/colorPrimary"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/payment_pay_via_card"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/payment_pay_via_card_text"
+                    android:text="Pay via Card"
+                    android:textColor="@color/item_name"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/stripe"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/payment_pay_via_card"
+                    android:background="@color/backgroundGrey"
+                    android:layout_marginTop="15dp"/>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_edit_ht"
+            android:id="@+id/payment_proceed"
+            android:text="Proceed to Confirmation"
+            android:layout_alignParentBottom="true"
+            style="@style/FormButton"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_payment_total"
+            android:layout_above="@id/payment_proceed"
+            android:layout_marginTop="60dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:id="@+id/payment_total_text"
+                android:textColor="@color/item_name"
+                android:textSize="@dimen/_18"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/payment_total"
+                android:text="$100"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18"
+               />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
